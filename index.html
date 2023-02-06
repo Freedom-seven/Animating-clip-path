@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Clip Path Animation</title>
+</head>
+<body>
+	<section>
+		<div class="sec sec1"><h2>Freedom</h2></div>
+		<div class="sec sec2"><h2>Freedom</h2></div>
+		<h2>Freedom</h2>
+	</section>
+
+	<script type="text/javascript">
+		let sec1 = document.querySelector('.sec1');
+		let sec2 = document.querySelector('.sec2');
+
+		window.addEventListener('scroll', function(){
+			var value = window.scrollY;
+			sec1.style.clipPath = "circle("+value * 1.15+"px at 0 0)";
+			sec2.style.clipPath = "circle("+value * 1.00+"px at 100% 100%)";
+		})
+	</script>
+</body>
+</html>
